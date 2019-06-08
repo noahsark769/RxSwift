@@ -7,6 +7,7 @@
 //
 
 #if os(iOS)
+#if !targetEnvironment(UIKitForMac)
 
     import UIKit
     import RxSwift
@@ -43,4 +44,5 @@
         }
     }
 
+#endif
 #endif

@@ -220,12 +220,15 @@ extension ObservableType {
             fatalError()
         }
     }
+
+    #if !targetEnvironment(UIKitForMac)
     extension UIWebView {
         @available(*, unavailable, message: "createRxDelegateProxy is now unavailable, check DelegateProxyFactory")
         public func createRxDelegateProxy() -> RxWebViewDelegateProxy {
             fatalError()
         }
     }
+    #endif
 #endif
 
 #if os(macOS)

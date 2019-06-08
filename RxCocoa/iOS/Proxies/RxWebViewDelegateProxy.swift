@@ -7,6 +7,7 @@
 //
 
 #if os(iOS)
+#if !targetEnvironment(UIKitForMac)
 
 import UIKit
 import RxSwift
@@ -35,4 +36,5 @@ open class RxWebViewDelegateProxy
     }
 }
 
+#endif
 #endif
